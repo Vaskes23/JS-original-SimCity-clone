@@ -269,7 +269,7 @@ function insert(event) {
     price = 500;
     writePrice();
   } //nastavení upgradů pro budovy /////////////////////////////////////////////////////////
-  else if (context == "upgrade" && grid[x][y] == "house") {
+  else if (context == "upgrade" && grid[x][y] == "house" && money > 500) {
     population += 200;
     building += 1;
     happiness += 5;
@@ -280,7 +280,7 @@ function insert(event) {
     writePrice();
     writeCurrenPopulation();
     grid[x][y] = "houseUpgrade";
-  } else if (context == "upgrade" && grid[x][y] == "shop") {
+  } else if (context == "upgrade" && grid[x][y] == "shop" && money > 500) {
     happiness += 10;
     money -= 500;
     price = 500;
